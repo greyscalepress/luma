@@ -1,0 +1,12 @@
+/* hide some stuff */
+
+.wp-list-table tbody .column-description {
+	max-height: 80px;
+	overflow: hidden;
+	display: block;
+}
+
+/***/
+
+
+
