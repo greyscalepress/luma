@@ -1,5 +1,60 @@
 <?php 
 
+/* Register Post Types
+ ********************
+*/
+
+add_action( 'init', 'luma_register_post_types' );
+
+function luma_register_post_types() {
+	
+	register_post_type(
+			'blog', array(	
+				'label' => __( 'Blog' ),
+				//'description' => 'Les films produits par Bord Cadre',
+				'public' => true,
+				'show_ui' => true,
+				'show_in_menu' => true,
+				 'menu_icon' => 'dashicons-format-chat', // src: http://melchoyce.github.io/dashicons/
+				// dashicons-admin-post
+				'capability_type' => 'post',
+				'hierarchical' => false,
+				'has_archive'		 => true,
+				'rewrite' => array('slug' => ''),
+				'query_var' => true,
+				'exclude_from_search' => false,
+				'menu_position' => 6,
+				'supports' => array(
+					'title',
+					'editor',
+					'revisions',
+					'thumbnail',
+					'author',
+					'publicize',
+					),
+				'taxonomies' => array( 'category', 'post_tag' ),
+				'labels' => array (
+			  	  'name' => 'Blog',
+			  	  'singular_name' => 'Blog',
+			  	  'menu_name' => 'Blog',
+			  	  'add_new' => 'Ajouter',
+			  	  'add_new_item' => 'Ajouter un billet',
+			  	  'edit' => 'Modifier',
+			  	  'edit_item' => 'Modifier le billet',
+			  	  'new_item' => 'Nouveau billet',
+			  	  'view' => 'Afficher',
+			  	  'view_item' => 'Afficher le billet',
+			  	  'search_items' => 'Rechercher',
+			  	  'not_found' => 'Aucun résultat',
+			  	  'not_found_in_trash' => 'Aucun résultat',
+			  	  'parent' => 'Élément Parent',
+			),
+		) 
+	);
+
+}
+
+
 function custom_taxonomies() 
 {  	 
 	
