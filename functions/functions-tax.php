@@ -51,6 +51,52 @@ function luma_register_post_types() {
 			),
 		) 
 	);
+	
+	
+	register_post_type(
+			'user_input', array(	
+				'label' => __( 'User Input' ),
+				//'description' => 'Les films produits par Bord Cadre',
+				'public' => true,
+				'show_ui' => true,
+				'show_in_menu' => true,
+				 'menu_icon' => 'dashicons-plus-alt', // src: http://melchoyce.github.io/dashicons/
+				// dashicons-admin-post
+				'capability_type' => 'post',
+				'hierarchical' => false,
+				'has_archive'		 => true,
+				'rewrite' => array('slug' => ''),
+				'query_var' => true,
+				'exclude_from_search' => false,
+				'menu_position' => 6,
+				'supports' => array(
+					'title',
+					'editor',
+					//'revisions',
+					'author',
+					'publicize',
+					'custom-fields',
+					),
+				'taxonomies' => array(  ),
+				'labels' => array (
+			  	  'name' => 'User input',
+			  	  'singular_name' => 'User input',
+			  	  'menu_name' => 'User input',
+			  	  'add_new' => 'Ajouter',
+			  	  'add_new_item' => 'Ajouter un billet',
+			  	  'edit' => 'Modifier',
+			  	  'edit_item' => 'Modifier le billet',
+			  	  'new_item' => 'Nouveau billet',
+			  	  'view' => 'Afficher',
+			  	  'view_item' => 'Afficher le billet',
+			  	  'search_items' => 'Rechercher',
+			  	  'not_found' => 'Aucun résultat',
+			  	  'not_found_in_trash' => 'Aucun résultat',
+			  	  'parent' => 'Élément Parent',
+			),
+		) 
+	);
+	
 
 }
 
