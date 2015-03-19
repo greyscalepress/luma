@@ -61,10 +61,7 @@
 								 
 					?>
 					</ul>
-					<?php dynamic_sidebar('sidebar-footer-center'); ?>
-				</div>
-				
-				<div class="widget-area">
+					
 					<h2 class="h2">Villes</h1>
 					<ul class="tag-cloud text">
 					<?php 
@@ -72,7 +69,29 @@
 					$args = array(
 					    'taxonomy'  => array('ville'),
 					    //info = 19, test=23, event=10
-					    'number' => 80, 
+					    'number' => 60, 
+					    'largest'	=> 16,
+					   ); 
+					   
+					wp_tag_cloud($args);
+								 
+					?>
+					</ul>
+					
+					<?php dynamic_sidebar('sidebar-footer-center'); ?>
+				</div>
+				
+				<div class="widget-area">
+					
+					
+					<h2 class="h2">Séries</h1>
+					<ul class="tag-cloud text">
+					<?php 
+					
+					$args = array(
+					    'taxonomy'  => array('info-1'),
+					    //info = 19, test=23, event=10
+					    'number' => 30, 
 					    'largest'	=> 16,
 					   ); 
 					   

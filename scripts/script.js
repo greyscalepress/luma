@@ -1,3 +1,9 @@
+//;
+//(function ($) {
+//	// Declare fancybox function, in order to prevent JS errors.
+//	$.fn.fancybox = function(options) {};
+//})(jQuery);
+
 jQuery( document ).ready( function( $ ) {	
 
 /*
@@ -6,6 +12,12 @@ jQuery( document ).ready( function( $ ) {
  *   1: Email Spam Protection 
  *
  */
+ 
+ /*
+  * For Outspoken
+ */
+ 
+ 
  
  
 /* 
