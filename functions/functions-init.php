@@ -77,6 +77,9 @@ add_action( 'wp_enqueue_scripts', 'custom_register_styles', 20);
 function remove_assets() {
     wp_dequeue_style('outspoken-style');
     // wp_deregister_style('outspoken-style');
+    
+//    wp_dequeue_script('fancybox');
+//    wp_dequeue_style('fancybox-style');
 }
 add_action('wp_print_styles', 'remove_assets', 99999);
 
@@ -129,7 +132,63 @@ function my_mem_settings() {
 add_action( 'mem_init', 'my_mem_settings' );  
 
 
+  
+/* Jetpack Stuff
+* see: http://jeremyherve.com/2013/11/19/customize-the-list-of-modules-available-in-jetpack/
 
+ * Disable all non-whitelisted jetpack modules.
+ *
+ * This will allow all of the currently available Jetpack modules to work
+ * normally. If there's a module you'd like to disable, simply comment it out
+ * or remove it from the whitelist and it will no longer load.
+ *
+ * @author FAT Media, LLC
+ * @link   http://wpbacon.com/tutorials/disable-jetpack-modules/
+ */
+ 
+add_filter( 'jetpack_get_available_modules', 'prefix_kill_all_the_jetpacks' );
+ 
+ function prefix_kill_all_the_jetpacks( $modules ) {
+ 	// A list of Jetpack modules which are allowed to activate.
+ 	$whitelist = array(
+// 		'after-the-deadline',
+ 		'carousel',
+// 		'comments',
+// 		'contact-form',
+// 		'custom-css',
+ 		'enhanced-distribution',
+// 		'gplus-authorship',
+// 		'gravatar-hovercards',
+// 		'infinite-scroll',
+// 		'json-api',
+// 		'latex',
+// 		'likes',
+		'markdown',
+// 		'minileven',
+// 		'mobile-push',
+ 		'monitor',
+// 		'notes',
+ 		'omnisearch',
+// 		'photon',
+// 		'post-by-email',
+ 		'publicize',
+// 		'sharedaddy',
+// 		'shortcodes',
+// 		'shortlinks',
+// 		'sso',
+ 		'stats',
+// 		'subscriptions',
+ 		'tiled-gallery',
+// 		'vaultpress',
+// 		'videopress',
+// 		'widget-visibility',
+// 		'widgets',
+ 	);
+ 	// Deactivate all non-whitelisted modules.
+ 	$modules = array_intersect_key( $modules, array_flip( $whitelist ) );
+ 	return $modules;
+}
+ 
 
 
 
