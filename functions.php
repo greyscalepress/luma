@@ -133,9 +133,17 @@ function video_tester( $howmany = -1 ) {
 function archive_page_query($query) {
   if ( !is_admin() && $query->is_main_query() ) {
     if ( is_archive() ) {
+    	if ( is_category( 'blog' ) ) {
+    		// category = blog 
+    		
+    		set_query_var('post_type', array('posts','blog') );
+    		
+    	} else {
       set_query_var('meta_key', 'Numero-Original');
       set_query_var('orderby', 'meta_value_num');
       set_query_var('order', 'ASC');
+      }
+      // 
     }
   }
 }
