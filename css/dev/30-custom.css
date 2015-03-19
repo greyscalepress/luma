@@ -1,20 +1,47 @@
 /* @override
 	http://catalogue-lumiere.com/wp-content/themes/luma/css/dev/30-custom.css */
 
-html {
-	font-family:	Chivo, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif
+html,
+.with_frm_style div.frm_description,
+.with_frm_style label.frm_primary_label, .with_frm_style.frm_login_form label 
+{
+	font-family: GTCinetype, Chivo, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif
 }	
 
 body {
-	background-color: #ccc;
+	background-color: #fff;
 }
 
 #page {
-	background: #f0f0f0;
+	background: #fff;
+}
+
+body #page {
+/*     max-width: 951px;  */
 }
 
 .clear {
 	clear: both;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+* `contenteditable` attribute is included anywhere else in the document.
+* Otherwise it causes space to appear at the top and bottom of elements
+* that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+* `:before` to contain the top-margins of child elements.
+*/
+.clear:before,
+.clear:after {
+content: " "; /* 1 */
+display: table; /* 2 */
+}
+.clear:after {
+clear: both;
 }
 
 body.home .hentry,
@@ -119,7 +146,7 @@ body.search .entry-content,
 }
 
 .navbar {
-	background: #666;
+/*	background: #999;*/
 }
 
 .site-title {
@@ -137,6 +164,8 @@ body.search .entry-content,
 	margin-bottom: 2rem;
 }
 
+/* @group SINGLE */
+
 body.single .hentry,
 body.page .hentry {
 	margin-bottom: 10px;
@@ -148,6 +177,57 @@ body.single #content .widget-area {
 	margin-bottom: 0rem;
 }
 
+body.single .main-image .wp-post-image {
+	width: 100% !important;
+	height: auto !important;
+}
+
+body.single .entry-header,
+.main-description {
+	text-align: right;
+}
+
+.main-descr-content {
+	font-size: 2.2rem;
+}
+
+body.single .entry-title {
+	margin-top: 0;
+	margin-bottom: 0.4em;
+}
+
+.single .numero-vue {
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+body.single .entry-meta {
+	clear: both;
+}
+
+.meta-box {
+	position: relative;
+}
+.meta-term {
+	font-weight: normal;
+/*	font-family: GTCinetypeBold;*/
+	float: left;
+	width: 12em;
+	border-bottom: 2px solid #ffe735;
+}
+
+.meta-desc {
+	padding-left: 13em;
+}
+
+.area-formulaire {
+	clear: both;
+	margin-bottom: 1em;
+}
+
+/* @end */
 
 #comments {
 	margin-top: 0px;
@@ -168,11 +248,22 @@ body.single .entry-meta {
 
 .taxonomies-box,
 .infobox {
-	border-left: 4px solid #eee;
+/*	border-left: 4px solid #eee;
 	padding: 0 1em;
 	margin: 1em 0 1em 0;
 	max-width: 33em;
-	line-height: 1.4;
+	line-height: 1.4;*/
+}
+
+.taxonomies-box p.meta-box,
+.taxonomies-box .meta-term,
+.taxonomies-box .meta-desc {
+	margin-bottom: 0;
+	line-height: 1.2;
+}
+
+.taxonomies-box .meta-term {
+	border-bottom: 0px;
 }
 
 .wp-video,
@@ -221,6 +312,8 @@ h3.sub-content {
 	margin-bottom: 1.7rem;
 }
 
+/* @group Sequence */
+
 .sequence ul {
 	list-style: none;
 	margin: 0px 0 2em 0;
@@ -255,6 +348,8 @@ h3.sub-content {
 	margin-bottom: 0;
 }
 
+/* @end */
+
 .boxed-title {
 	display: none;
 	position: absolute;
@@ -279,94 +374,50 @@ h3.sub-content {
 
 /* @end */
 
+/* @group Formulaire */
 
-@media only screen 
-and (min-width : 641px) {
-		
-		.search .wp-post-image,
-		.archive .wp-post-image {
-			width: 38%;
-		}
-		body.archive .entry-column,
-		body.search .entry-column {
-			width: 60%;
-		}
- 
+.area-formulaire {
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
-
-/* Medium screens ----------- */
-@media only screen 
-and (min-width : 768px) {
-	
-	.has-top-border {
-		margin-top: 2em;
-	}
-	
-	.wp-video,
-	.has-video .main-image .wp-post-image,
-	.has-video iframe {
-		float: left;
-		margin-top: 1.5em;
-		margin-bottom: 1.5em;
-	}
-	
-	.has-video .main-image .wp-post-image {
-		margin-right: 5%;
-		height: auto;
-		width: 47%;
-	}
-	
-	.wp-video,
-	.has-video iframe  {
-		width: 47%;
-		height: 262px;
-	}
-
+.call-to-action {
+	text-align: right;
+	float: right;
 }
 
-@media only screen 
-and (min-width : 900px) {
-		
-		.search .wp-post-image,
-		.archive .wp-post-image {
-			width: 28%;
-		}
-		body.archive .entry-column,
-		body.search .entry-column {
-			width: 70%;
-		}
-		
-		.wp-video,
-		.has-video iframe  {
-			height: 350px;
-		}
- 
+.button {
+	border: 2px solid #333;
+	display: inline;
+	padding: 0.5em;
+	background: #ffe735;
+	color: #000;
+	font-weight: bold;
+	font-size: 2.3rem;
+	cursor: pointer;
+	opacity: 0.82;
+}
+.button:hover {
+	background: #666;
+	color: #fff;
 }
 
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1000px) {
-/* Styles */
-
-		.wp-video,
-		.has-video iframe  {
-			height: 400px;
-		}
-		
-		
-/*		.has-video .wp-post-image {
-			width: 470px;
-			margin-right: 20px;
-		}
-		
-		.wp-video,
-		.mejs-container,.wp-video-shortcode,.mejs-layer,
-		.has-video iframe  {
-			width: 470px !important;
-			height: 352px !important;
-		}*/
+.with_frm_style div.frm_description {
+	font-size: 2rem;
+	padding: 0;
+	margin: 2em 0;
 }
+.with_frm_style div.frm_description p {
+	margin: 0;
+}
+
+#frm-map-canvas {
+	max-width: 600px;
+	width: 100%;
+}
+
+/* @end */
+
 
 
 

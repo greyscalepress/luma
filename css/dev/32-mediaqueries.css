@@ -1,0 +1,120 @@
+/* @override 
+	http://catalogue-lumiere.com/wp-content/themes/luma/css/dev/32-mediaqueries.css */
+
+@media only screen 
+and (min-width : 641px) {
+		
+		.search .wp-post-image,
+		.archive .wp-post-image {
+			width: 38%;
+		}
+		body.archive .entry-column,
+		body.search .entry-column {
+			width: 60%;
+		}
+		
+		.archive .infobox {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			
+			-webkit-column-gap: 3em;
+			-moz-column-gap: 3em;
+			column-gap: 3em;
+			
+			-webkit-column-rule: 1px outset #999;
+			-moz-column-rule: 1px outset #999;
+			column-rule: 1px outset #999;
+		}
+ 
+}
+
+
+/* Medium screens ----------- */
+@media only screen 
+and (min-width : 768px) {
+	
+	.has-top-border {
+		margin-top: 2em;
+	}
+	
+	.wp-video,
+	.has-video .main-image .wp-post-image,
+	.has-video iframe {
+		float: left;
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
+	}
+	
+	.has-video .main-image .wp-post-image {
+		margin-right: 5%;
+		height: auto;
+		width: 47%;
+	}
+	
+	.wp-video,
+	.has-video iframe  {
+		width: 47%;
+		height: 262px;
+	}
+	
+	.main-description {
+		width: 80%;	
+		float: right;
+	}
+
+}
+
+@media only screen 
+and (min-width : 900px) {
+		
+		.search .wp-post-image,
+		.archive .wp-post-image {
+			width: 28%;
+		}
+		body.archive .entry-column,
+		body.search .entry-column {
+			width: 70%;
+		}
+		
+		.wp-video,
+		.has-video iframe  {
+			height: 350px;
+		}
+		
+		.main-description {
+			width: 70%;	
+			float: right;
+		}
+ 		
+ 		.archive .infobox {
+ 			-webkit-column-count: 3;
+ 			-moz-column-count: 3;
+ 			column-count: 3;
+ 			
+ 		}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1000px) {
+/* Styles */
+
+		.wp-video,
+		.has-video iframe  {
+			height: 400px;
+		}
+		
+		
+/*		.has-video .wp-post-image {
+			width: 470px;
+			margin-right: 20px;
+		}
+		
+		.wp-video,
+		.mejs-container,.wp-video-shortcode,.mejs-layer,
+		.has-video iframe  {
+			width: 470px !important;
+			height: 352px !important;
+		}*/
+}

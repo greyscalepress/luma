@@ -1,0 +1,32 @@
+@font-face {
+font-family: 'GTCinetype';
+src: url('../../fonts/GT-Cinetype-Regular.eot');
+src: url('../../fonts/GT-Cinetype-Regular.eot?#iefix') format('embedded-opentype'),
+url('../../fonts/GT-Cinetype-Regular.woff') format('woff'),
+url('../../fonts/GT-Cinetype-Regular.ttf') format('truetype'),
+url('../../fonts/GT-Cinetype-Regular.svg#GTCinetype') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'GTCinetype';
+src: url('../../fonts/GT-Cinetype-Bold.eot');
+src: url('../../fonts/GT-Cinetype-Bold.eot?#iefix') format('embedded-opentype'),
+url('../../fonts/GT-Cinetype-Bold.woff') format('woff'),
+url('../../fonts/GT-Cinetype-Bold.ttf') format('truetype'),
+url('../../fonts/GT-Cinetype-Bold#GTCineBold') format('svg');
+font-weight: bold;
+font-style: normal;
+} 
+
+/*@font-face {
+font-family: 'GTCinetypeBold';
+src: url('../../fonts/GT-Cinetype-Bold.eot');
+src: url('../../fonts/GT-Cinetype-Bold.eot?#iefix') format('embedded-opentype'),
+url('../../fonts/GT-Cinetype-Bold.woff') format('woff'),
+url('../../fonts/GT-Cinetype-Bold.ttf') format('truetype'),
+url('../../fonts/GT-Cinetype-Bold#GTCineBold') format('svg');
+font-weight: normal;
+font-style: normal;
+} */
