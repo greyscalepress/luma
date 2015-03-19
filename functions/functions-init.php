@@ -35,12 +35,12 @@ function custom_register_styles() {
 				wp_dequeue_style( 'outspoken-style' );
 				
 				
-				wp_enqueue_style( 
-						'google-fonts', 
-						'//fonts.googleapis.com/css?family=Chivo:400,400italic,900,900italic',
-						false,
-						null
-				); 
+//				wp_enqueue_style( 
+//						'google-fonts', 
+//						'//fonts.googleapis.com/css?family=Chivo:400,400italic,900,900italic',
+//						false,
+//						null
+//				); 
 				
 				// the MAIN stylesheet
 				wp_enqueue_style( 
