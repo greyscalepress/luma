@@ -5,7 +5,7 @@ html,
 .with_frm_style div.frm_description,
 .with_frm_style label.frm_primary_label, .with_frm_style.frm_login_form label 
 {
-	font-family: GTCinetype, Chivo, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif
+	font-family: GTCinetype, "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif
 }	
 
 body {
@@ -43,6 +43,37 @@ display: table; /* 2 */
 .clear:after {
 clear: both;
 }
+
+/* @group LIENS */
+
+#page a {
+		color: #333;
+/*		border-bottom: 0px solid #ffe735;*/
+}
+#page .entry-content a,
+.entry-summary a,
+.page-content a {
+	color: #333;
+	border-bottom: 1px solid rgba(68, 68, 68, 0.4);
+}
+#page a:hover {
+  color: #333;
+  background: #ffe735;
+/*  border-bottom: 1px solid #ffe735;*/
+}
+
+#page .entry-content a:hover,
+#page .entry-summary a:hover,
+#page .page-content a:hover {
+  color: #000000;
+  border-bottom-color: #ffe735;
+  }
+  
+#page .sequence-li a {
+	border-bottom: 0;
+}
+
+/* @end */
 
 body.home .hentry,
 body.archive .hentry,
@@ -182,8 +213,8 @@ body.single .main-image .wp-post-image {
 	height: auto !important;
 }
 
-body.single .entry-header,
-.main-description {
+body.single-post .entry-header,
+.single-post .main-description {
 	text-align: right;
 }
 
@@ -331,12 +362,16 @@ h3.sub-content {
 }
 
 .sequence .current {
-	border: 1px solid #ff5436;
-	padding: 2px;
-	background: #fed7ce;
+/*	border: 1px solid #ff5436;
+	padding: 2px;*/
+	background: #ffe735;
 }
 
-
+.sequence .current a {
+/*	border: 1px solid #ff5436;
+	padding: 2px;*/
+	opacity: 0.7;
+}
 
 .sequence a {
 	display: block;
@@ -387,19 +422,28 @@ h3.sub-content {
 }
 
 .button {
-	border: 2px solid #333;
 	display: inline;
 	padding: 0.5em;
 	background: #ffe735;
+	background: #fff;
 	color: #000;
 	font-weight: bold;
 	font-size: 2.3rem;
 	cursor: pointer;
 	opacity: 0.82;
 }
+
+.button,
+.load-more {
+	border: 2px solid #ffe735;
+	border-radius: 0px;
+}
+
+.load-more:hover,
 .button:hover {
-	background: #666;
-	color: #fff;
+	background: #ffe735;
+	color: #000;
+	border: 2px solid #ffe735;
 }
 
 .with_frm_style div.frm_description {

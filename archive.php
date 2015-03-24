@@ -65,6 +65,9 @@ get_header(); ?>
 			$term_id = $queried_object->term_id;
 			$term_description = $queried_object->description;
 			
+			// TODO : check for the length of $term_description
+			// Use multi-column only for long descriptions.
+			
 			if (!empty($term_description)) {
 				echo '<div class="infobox">';
 				echo apply_filters( 'the_content', $term_description );

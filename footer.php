@@ -12,94 +12,24 @@
 		<div id="footer-widgets" class="sidebar-container" role="complementary">
 			<div class="sidebar-inner">
 				<div class="widget-area">
-					<h2 class="h2">Opérateurs</h1>
-					<ul class="tag-cloud text">
+										
 					<?php 
-					      		
-					$args = array(
-					    'show_option_all'    => '',
-					    	'orderby'            => 'name',
-					    	'order'              => 'ASC',
-					    	'style'              => 'list',
-					    	'show_count'         => 1,
-					    	'hide_empty'         => 1,
-					    	'use_desc_for_title' => 0,
-					    	'exclude'            => '',
-					    	'exclude_tree'       => '',
-					    	'hierarchical'       => 0,
-					    	'title_li'           => '',
-					    	'number'             => null,
-					    	'echo'               => 1,
-					    	'depth'              => 0,
-					    	'current_category'   => 0,
-					    	'pad_counts'         => 0,
-					    	'taxonomy'           => 'operateur',
-					    	'walker'             => null
-					   ); 
-					   
-					wp_list_categories( $args );
-								 
-					?>
-					</ul>
+					
+					// NOTE: la liste des opérateurs est dans le widget custom
+					
+					dynamic_sidebar('sidebar-footer-left'); ?>
+					
 				</div>
 				
 				<div class="widget-area">
 					
-					<h2 class="h2">Pays</h1>
-					<ul class="tag-cloud text">
-					<?php 
-					      		
-					
-					$args = array(
-					    'taxonomy'  => array('pays'),
-					    //info = 19, test=23, event=10
-					    'number' => 80, 
-					    'largest'	=> 16,
-					   ); 
-					   
-					wp_tag_cloud($args);
-								 
-					?>
-					</ul>
-					
-					<h2 class="h2">Villes</h1>
-					<ul class="tag-cloud text">
-					<?php 
-					
-					$args = array(
-					    'taxonomy'  => array('ville'),
-					    //info = 19, test=23, event=10
-					    'number' => 60, 
-					    'largest'	=> 16,
-					   ); 
-					   
-					wp_tag_cloud($args);
-								 
-					?>
-					</ul>
 					
 					<?php dynamic_sidebar('sidebar-footer-center'); ?>
 				</div>
 				
 				<div class="widget-area">
 					
-					
-					<h2 class="h2">Séries</h1>
-					<ul class="tag-cloud text">
-					<?php 
-					
-					$args = array(
-					    'taxonomy'  => array('info-1'),
-					    //info = 19, test=23, event=10
-					    'number' => 30, 
-					    'largest'	=> 16,
-					   ); 
-					   
-					wp_tag_cloud($args);
-								 
-					?>
-					</ul>
-					
+										
 					<?php dynamic_sidebar('sidebar-footer-right'); ?>
 				</div>
 			</div>
@@ -108,9 +38,8 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
 				<?php do_action('outspoken_credits'); ?>
-				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"><?php bloginfo('name'); ?></a>
 				
-				– made in 2013-2014 – built with WordPress
+				Ce site repose sur les données produites par l'équipe de recherche de Michelle Aubert et Jean-Claude Seguin. Il a été développé par Manuel Schmalstieg et des étudiants de l’EAA La Chaux-de-Fonds (<a href="http://catalogue-lumiere.com/">voir crédits</a>).
 				
 <?php ?>
 			</div><!-- .site-info -->

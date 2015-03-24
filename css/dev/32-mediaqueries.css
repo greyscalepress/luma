@@ -58,7 +58,7 @@ and (min-width : 768px) {
 		height: 262px;
 	}
 	
-	.main-description {
+	.single-post .main-description {
 		width: 80%;	
 		float: right;
 	}
@@ -82,7 +82,7 @@ and (min-width : 900px) {
 			height: 350px;
 		}
 		
-		.main-description {
+		.single-post .main-description {
 			width: 70%;	
 			float: right;
 		}

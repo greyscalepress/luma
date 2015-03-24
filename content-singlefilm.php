@@ -63,7 +63,11 @@
 	
 	// START formulaire
 	
-	include 'inc/form-item.php'; 
+	if ( is_singular( 'post' ) ) { 
+	
+		include 'inc/form-item.php'; 
+	
+	}
 		
 	 ?>
 			
@@ -199,18 +203,33 @@
 			</div>
 			<?php
 		}
-		
-
+				
+				// GEOMAPPING
+				
+				if ( is_singular( 'post' ) ) { 
+					
+					if (function_exists('lumiere_geomapping_post')) {
+					    lumiere_geomapping_post($post->ID);
+					}
+					
+				}
+				
+				
 				
 				// TIMELINE		
 				
 				// Load timeline via custom plugin.
 				// If function exists, run function.
+				
+				if ( is_singular( 'post' ) ) { 
 					
 					if (function_exists('lumiere_timeline')) {
 					    lumiere_timeline($cf_timestamp);
 					}
 					
+				}
+				
+				
 				
 							 ?>
 							
