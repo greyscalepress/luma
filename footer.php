@@ -39,7 +39,7 @@
 			<div class="site-info">
 				<?php do_action('outspoken_credits'); ?>
 				
-				Ce site repose sur les données produites par l'équipe de recherche de Michelle Aubert et Jean-Claude Seguin. Il a été développé par Manuel Schmalstieg et des étudiants de l’EAA La Chaux-de-Fonds (<a href="http://catalogue-lumiere.com/">voir crédits</a>).
+				Ce site repose sur les données produites par l'équipe de recherche de Michelle Aubert et Jean-Claude Seguin. Il a été développé par Manuel Schmalstieg et des étudiants de l’EAA La Chaux-de-Fonds (<a href="//catalogue-lumiere.com/">voir crédits</a>).
 				
 <?php ?>
 			</div><!-- .site-info -->

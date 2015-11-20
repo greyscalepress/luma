@@ -62,6 +62,26 @@ and (min-width : 768px) {
 		width: 80%;	
 		float: right;
 	}
+	
+	.site-title {
+		display: block;
+	}
+	.home-link {
+		display: block;
+		position: relative;
+		width: 100%;
+	}
+	.home-link a {
+		display: block;
+		float: left;
+		width: 20%;
+		
+	}
+	.home-link .site-description {
+		float: right;
+		clear: none;
+		width: 80%;
+	}
 
 }
 
