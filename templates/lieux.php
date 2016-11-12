@@ -32,7 +32,7 @@ get_header(); ?>
 				
 				<?php // echo $result['content']; ?>
 				
-				<h2 class="h2">Pays</h2>
+				<h2 class="h2">Pays / Countries</h2>
 				<ul class="tag-cloud text">
 				<?php 
 				      		
@@ -49,7 +49,7 @@ get_header(); ?>
 				?>
 				</ul>
 				
-				<h2 class="h2">Villes</h2>
+				<h2 class="h2">Villes / Cities</h2>
 				<ul class="tag-cloud text">
 				<?php 
 				
