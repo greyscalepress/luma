@@ -189,6 +189,23 @@ add_filter( 'jetpack_get_available_modules', 'prefix_kill_all_the_jetpacks' );
  	return $modules;
 }
  
+/** 
+ * REST API
+ * allow REST API to filter by custom field
+ * SEE: http://wordpress.stackexchange.com/questions/225850/
+ * and 
+ * https://github.com/WP-API/WP-API/issues/1599
+ */
+
+add_filter('rest_query_vars', 'wpse225850_add_rest_query_vars');
+
+function wpse225850_add_rest_query_vars($query_vars) {
+
+    $query_vars = array_merge( $query_vars, array('meta_key', 'meta_value', 'meta_compare') );
+
+    return $query_vars;
+
+}
 
 
 
