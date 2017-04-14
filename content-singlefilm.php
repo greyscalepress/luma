@@ -86,7 +86,7 @@
 		
 		if (!empty($operator_array)) {
 		
-		echo $cfmt_opn.'Opérateur:'. $cfmt_mid .'<a href="http://catalogue-lumiere.com/operateur/'.$operator_array[0]->slug.'/">'. $cf_operateur .'</a>' .$cfmt_cls;
+		echo $cfmt_opn.'Opérateur:'. $cfmt_mid .'<a href="//catalogue-lumiere.com/operateur/'.$operator_array[0]->slug.'/">'. $cf_operateur .'</a>' .$cfmt_cls;
 		} else {
 			echo $cfmt_opn.'Opérateur:'.$cfmt_mid . $cf_operateur . $cfmt_cls;
 		}
