@@ -27,7 +27,9 @@ get_header(); ?>
 		// $current_term = single_term_title("", false);
 		
 		$queried_object = get_queried_object();
-		// var_dump( $queried_object );
+//		echo '<pre>';
+//		var_dump( $queried_object );
+//		echo '</pre>';
 			
 		 ?>
 		<header class="archive-header">
@@ -61,7 +63,6 @@ get_header(); ?>
 			 * and custom meta
 			*/
 			
-			
 			$term_id = $queried_object->term_id;
 			$term_description = $queried_object->description;
 			
@@ -72,6 +73,17 @@ get_header(); ?>
 				echo '<div class="infobox">';
 				echo apply_filters( 'the_content', $term_description );
 				echo '</div>';
+			}
+			
+			if ( is_tax() ) {
+			
+				// Show number of found items:
+				
+				echo '<div class="films-found"><h2>';
+				echo 'Films found / nombre de films: ';
+				echo $queried_object->count;
+				echo '</h2></div>';
+				
 			}
 			
 		?>
