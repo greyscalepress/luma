@@ -81,6 +81,13 @@ function video_links($cf_video = '') {
 						
 						echo '<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/'. $video_url .'?rel=0" frameborder="0" allowfullscreen></iframe>';
 						
+				} else if (substr($video_url, 0, 17) == "https://youtu.be/") {
+				
+					$video_url = str_replace("https://youtu.be/", "", $video_url);
+					
+					echo '<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/'. $video_url .'?rel=0" frameborder="0" allowfullscreen></iframe>';
+				
+				
 				}
 	
 	}
