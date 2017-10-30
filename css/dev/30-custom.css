@@ -336,6 +336,10 @@ body.single .entry-meta {
 	font-size: 1.6rem;
 }
 
+.infobox a {
+	background: #ffe735;
+}
+
 /* @end */
 
 
