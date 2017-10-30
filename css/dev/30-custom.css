@@ -383,8 +383,8 @@ h3.sub-content {
 }
 
 .sequence .wp-post-image {
-	max-width: 120px;
-	height: auto;
+	width: 120px;
+	height: 90px;
 	margin-bottom: 0;
 }
 
