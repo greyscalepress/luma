@@ -106,12 +106,26 @@ and (min-width : 900px) {
 			width: 70%;	
 			float: right;
 		}
+		
+		
+		.archive .infobox-short {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+			font-size: 2em;
+		}
+			
+		.archive .infobox-medium {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			font-size: 1.6em;
+		}
  		
- 		.archive .infobox {
+ 		.archive .infobox-long {
  			-webkit-column-count: 3;
  			-moz-column-count: 3;
  			column-count: 3;
- 			
  		}
 }
 

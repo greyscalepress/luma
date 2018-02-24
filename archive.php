@@ -66,11 +66,23 @@ get_header(); ?>
 			$term_id = $queried_object->term_id;
 			$term_description = $queried_object->description;
 			
-			// TODO : check for the length of $term_description
+			// check for the length of $term_description
 			// Use multi-column only for long descriptions.
 			
+			$infobox_class = "infobox-short";
+			
+			if (strlen($term_description)>400) {
+				
+				$infobox_class = "infobox-medium";
+			}
+			if (strlen($term_description)>800) {
+				
+				$infobox_class = "infobox-long";
+			}
+	
+			
 			if (!empty($term_description)) {
-				echo '<div class="infobox">';
+				echo '<div class="infobox '.$infobox_class.'">';
 				echo apply_filters( 'the_content', $term_description );
 				echo '</div>';
 			}

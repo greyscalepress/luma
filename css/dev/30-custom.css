@@ -192,8 +192,8 @@ body.search .entry-content,
 }
 
 #content {
-	margin-bottom: 20px;
-	margin-bottom: 2rem;
+	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 /* @group SINGLE */
@@ -216,7 +216,7 @@ body.single .main-image .wp-post-image {
 
 body.single-post .entry-header,
 .single-post .main-description {
-	text-align: right;
+	/*text-align: right;*/
 }
 
 .main-descr-content {
@@ -421,10 +421,7 @@ h3.sub-content {
 	margin-bottom: 2em;
 }
 
-.call-to-action {
-	text-align: right;
-	float: right;
-}
+
 
 .button {
 	display: inline;
@@ -449,6 +446,12 @@ h3.sub-content {
 	background: #ffe735;
 	color: #000;
 	border: 2px solid #ffe735;
+}
+
+.call-to-action {
+	text-align: right;
+	float: right;
+	display: none;
 }
 
 .with_frm_style div.frm_description {
