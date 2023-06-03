@@ -19,6 +19,15 @@ function goodbye_howdy ( $wp_admin_bar ) {
 add_action( 'admin_bar_menu', 'goodbye_howdy' );
 
 
+add_action( 'wp_before_admin_bar_render', 'luma_before_admin_bar_render', 11 ); 
+
+function luma_before_admin_bar_render()
+{
+    global $wp_admin_bar;
+
+    $wp_admin_bar->remove_menu('customize');
+    $wp_admin_bar->remove_menu('frm-forms');
+}
 // Admin Interface improvement
 
 
