@@ -21,6 +21,15 @@ wpShower::checkFrontPage();
 <html class="<?php echo $html_class; ?>" <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-98845LF6LH"></script>
+	<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-98845LF6LH');
+	</script>
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title><?php wp_title('|', true, 'right'); ?></title>
