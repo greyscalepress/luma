@@ -37,8 +37,22 @@
 			
 			if ( $cf_video ) { 
 				$post_class_variable .= ' has-video';
+//				
+//				echo '<pre>';
+//				var_dump($cf_video);
+//				echo '</pre>';
+				
+				if ( count( $cf_video ) > 1 ) {
+				
+					$post_class_variable .= ' has-videos';
+					
+				}
+				
 			} else if (!empty($video_array)) {
 				$post_class_variable .= ' has-video';
+				
+			} else {
+				$post_class_variable .= ' no-video';
 			}
 		
 		}

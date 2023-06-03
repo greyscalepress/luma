@@ -14,13 +14,13 @@
 		// test for attached mp4 file
 		     if (!empty($video_array)) {
 		     	foreach ($video_array as $key => $value) {
-		     		echo do_shortcode('[video width="350" height="262" mp4="'.$value["url"].'"][/video]');
+		     	//	echo do_shortcode('[video width="350" height="262" mp4="'.$value["url"].'"][/video]');
 		     	}
 		     }
 		
 		// test for video custom field
 		if ( $cf_video ) {
-			video_links( $cf_video );
+		//	video_links( $cf_video );
 		}
 		
 ?>
@@ -76,9 +76,9 @@
 	<?php
 	
 	// opening, middle and closing tags
-	$cfmt_opn = '<p class="meta-box"><dt class="meta-term">';
+	$cfmt_opn = '<div class="meta-box"><dt class="meta-term">';
 	$cfmt_mid = '</dt><dd class="meta-desc">';
-	$cfmt_cls = '</dd></p>';
+	$cfmt_cls = '</dd></div>';
 
 	if($cf_operateur !== '') { 
 		

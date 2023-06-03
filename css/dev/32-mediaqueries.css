@@ -1,6 +1,12 @@
 /* @override 
 	http://catalogue-lumiere.com/wp-content/themes/luma/css/dev/32-mediaqueries.css */
 
+.archive .infobox-short {
+	max-width: 28em;
+	line-height: 1.4;
+	hyphens: none;
+}
+
 @media only screen 
 and (min-width : 641px) {
 		
@@ -26,6 +32,14 @@ and (min-width : 641px) {
 			-moz-column-rule: 1px outset #999;
 			column-rule: 1px outset #999;
 		}
+		
+		.archive .infobox-short {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+/*			font-size: 2em;*/
+			
+		}
  
 }
 
@@ -42,8 +56,8 @@ and (min-width : 768px) {
 	.has-video .main-image .wp-post-image,
 	.has-video iframe {
 		float: left;
-		margin-top: 1.5em;
-		margin-bottom: 1.5em;
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 	
 	.has-video .main-image .wp-post-image {
@@ -58,8 +72,33 @@ and (min-width : 768px) {
 		height: 262px;
 	}
 	
+	.has-video .entry-title,
+	.has-video .numero-vue {
+		float: right;
+		width: 50%;
+		/*border: 1px solid red;*/
+		clear: right;
+	}
+	
+	/*
+	 No video, or several videos
+	*/
+	
+	.no-video .entry-title, 
+	.no-video .numero-vue,
+	.has-videos .entry-title, 
+	.has-videos .numero-vue {
+		float: left;
+		clear: left;
+	}
+	
+	body.single  .has-video .entry-title {
+		margin-top: 15px;
+	}
+	
+
 	.single-post .main-description {
-		width: 80%;	
+		width: 50%;	
 		float: right;
 	}
 	
@@ -70,17 +109,20 @@ and (min-width : 768px) {
 		display: block;
 		position: relative;
 		width: 100%;
+		
 	}
 	.home-link a {
 		display: block;
 		float: left;
 		width: 20%;
-		
+		width: calc(100px);
 	}
 	.home-link .site-description {
 		float: right;
 		clear: none;
 		width: 80%;
+		width: calc(100% - 130px);
+		text-align: left;
 	}
 
 }
@@ -103,7 +145,7 @@ and (min-width : 900px) {
 		}
 		
 		.single-post .main-description {
-			width: 70%;	
+			/*width: 70%;*/	
 			float: right;
 		}
 		
@@ -113,6 +155,8 @@ and (min-width : 900px) {
 			-moz-column-count: 1;
 			column-count: 1;
 			font-size: 2em;
+			max-width: 30em;
+			line-height: 1.4;
 		}
 			
 		.archive .infobox-medium {
@@ -140,6 +184,7 @@ and (min-width : 1000px) {
 		}
 		
 		
+		
 /*		.has-video .wp-post-image {
 			width: 470px;
 			margin-right: 20px;
@@ -151,4 +196,12 @@ and (min-width : 1000px) {
 			width: 470px !important;
 			height: 352px !important;
 		}*/
+}
+
+
+/* For Blog posts */
+
+.single-blog .entry-title {
+	float: none;
+	width: 100%;
 }

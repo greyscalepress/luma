@@ -143,6 +143,12 @@ li,
 	width: auto;
 }
 
+.home-link img {
+	/* original: 140 x 154 */ 
+	width: 100px;
+	height: 110px;
+}
+
 ul.tag-cloud {
 	padding-left: 0;
 	line-height: 1.2;
@@ -410,6 +416,7 @@ h3.sub-content {
 
 .site-info {
 	width: 100%;
+	hyphens: none;
 }
 
 /* @end */
