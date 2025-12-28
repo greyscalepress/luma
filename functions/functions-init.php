@@ -47,7 +47,7 @@ function custom_register_styles() {
 						'luma-style', 
 						get_stylesheet_directory_uri() . '/css/dev/00-main.css', // main.css
 						false, // dependencies
-						null // version
+						'1.1' // version
 				); 
 				
 				

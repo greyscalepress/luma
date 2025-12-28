@@ -1,9 +1,11 @@
 /*
 NOTE:
-all those files will be concatenated + minified by the h5bp build script!
+all those files may be concatenated + minified by the build script!
 */
 
 @import '20-fonts.css';
+@import "https://catalogue-lumiere.com/wp-content/themes/outspoken/style.css";
+@import '25-parent.css';
 @import '30-custom.css';
 @import '32-mediaqueries.css';
 /* @import '90-print.css'; */
